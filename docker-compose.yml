@@ -10,8 +10,8 @@ services:
     command: sleep infinity 
     volumes:
       #- ./config:/etc/odoo
-      - ./extra-addons:/usr/lib/python3/dist-packages/odoo/extra-addons
-      - ./config:/usr/lib/python3/dist-packages/odoo
+      - ./extra-addons:/usr/lib/python3/dist-packages/odoo/extra-addons:cached
+      - ./config:/usr/lib/python3/dist-packages/odoo/odoo 
   db:
     image: postgres:13
     environment:
